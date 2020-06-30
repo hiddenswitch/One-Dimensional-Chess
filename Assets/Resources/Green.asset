@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b53fb99245d943279a9694e24eff2a05, type: 3}
-  m_Name: Pink
+  m_Name: Green
   m_EditorClassIdentifier: 
   m_PieceTypeColorSprites:
     reorderableList:
@@ -62,9 +62,9 @@ MonoBehaviour:
     - m_PieceType: 0
       m_IsBlack: 0
     _values:
-    - {fileID: 21300000, guid: 4c2098eff84cf49429827770e162a627, type: 3}
-    - {fileID: 21300000, guid: f2dcfa499efd047f893f81e69f575a44, type: 3}
-    - {fileID: 21300000, guid: 92ac1f07d55b2404c93e137e248be1d8, type: 3}
-    - {fileID: 21300000, guid: ff6030978a03b4d9db1d6df7a01a2170, type: 3}
-    - {fileID: 21300000, guid: 34ba0a7eaf2fc4383ba7a9422a11a6b6, type: 3}
-    - {fileID: 21300000, guid: d01a9bdda24934e0ca7c0f4eb9346406, type: 3}
+    - {fileID: 21300000, guid: 1908353ed010f4036a781b8a29cab45d, type: 3}
+    - {fileID: 21300000, guid: 5628bacf055d340f5b8cf17872c0a3ce, type: 3}
+    - {fileID: 21300000, guid: a0bd0cc111c6840d1b2b7e3998f1f1a1, type: 3}
+    - {fileID: 21300000, guid: 6620a2cc7153d4c18ac4ad616c898f45, type: 3}
+    - {fileID: 21300000, guid: 4dc84db2a907040c081046dfff2383f0, type: 3}
+    - {fileID: 21300000, guid: fbca888a13cd54221be70c138ee34f95, type: 3}
