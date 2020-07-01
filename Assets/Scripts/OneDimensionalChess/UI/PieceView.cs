@@ -18,7 +18,7 @@ namespace OneDimensionalChess.UI
         private Image m_Image;
         [SerializeField] private RectTransform m_RectTransform;
         [SerializeField] private CanvasGroup m_CanvasGroup;
-        public IReactiveProperty<Piece> piece => m_Piece;
+        public ReactiveProperty<Piece> piece => m_Piece;
 
 
         protected override void Start()
@@ -43,7 +43,7 @@ namespace OneDimensionalChess.UI
 
             if (m_RectTransform != null)
             {
-                m_RectTransform.anchoredPosition = new Vector2(0, 40 * currentPiece.position);
+                m_RectTransform.anchoredPosition = new Vector2(0, GameContext.pieceSize * currentPiece.position);
             }
 
             if (m_CanvasGroup != null)

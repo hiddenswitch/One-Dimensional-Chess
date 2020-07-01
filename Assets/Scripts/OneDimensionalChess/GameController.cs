@@ -18,11 +18,6 @@ namespace OneDimensionalChess
         protected override void Start()
         {
             base.Start();
-            // Instead of play button that starts the game and whatever the fuck, we're going
-            // to play the game randomly stepping every second
-
-            gameContext.PlayGameRandomly(Observable.Interval(TimeSpan.FromSeconds(1f)).AsUnitObservable())
-                .AddTo(this);
         }
     }
 }
