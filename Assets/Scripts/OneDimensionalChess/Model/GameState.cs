@@ -13,6 +13,7 @@ namespace OneDimensionalChess.Model
         [SerializeField] private int m_Size;
         [SerializeField] private Piece[] m_Pieces;
         [SerializeField] private int m_Turn;
+        [SerializeField] private bool m_Simulated;
 
         public int size
         {
@@ -48,6 +49,12 @@ namespace OneDimensionalChess.Model
                 new Piece(9) {isBlack = true, position = 11, type = PieceType.ROOK},
             }
         };
+
+        public bool simulated
+        {
+            get => m_Simulated;
+            set => m_Simulated = value;
+        }
 
         public static GameState sacksons => m_Sacksons;
 

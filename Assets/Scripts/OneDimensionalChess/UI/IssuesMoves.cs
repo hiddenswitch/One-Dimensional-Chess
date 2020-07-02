@@ -20,7 +20,7 @@ namespace OneDimensionalChess.UI
         protected override void Start()
         {
             base.Start();
-
+            var pieceView = GetComponent<PieceView>();
 
             var startPosition = Vector2.zero;
             var rectTransform = transform as RectTransform;
@@ -32,7 +32,7 @@ namespace OneDimensionalChess.UI
                 .Subscribe(_ =>
                 {
                     startPosition = rectTransform.anchoredPosition;
-                    startPiecePosition = GetComponent<PieceView>().piece.Value.position;
+                    startPiecePosition = pieceView.piece.Value.position;
                 })
                 .AddTo(this);
             this.OnDragAsObservable()
@@ -43,7 +43,6 @@ namespace OneDimensionalChess.UI
                 })
                 .AddTo(this);
 
-            var subscriptions = 0;
             this.OnEndDragAsObservable()
                 .Select(_ =>
                 {
@@ -54,22 +53,8 @@ namespace OneDimensionalChess.UI
                         startPiecePosition + (int) (canvasDistance + 0.5f) / GameContext.pieceSize;
                     return destinationPosition;
                 })
-                .DoOnSubscribe(() => { subscriptions++; })
                 .Subscribe(m_Commands)
                 .AddTo(this);
-
-            // commands
-            //     .Debug("Commanded Position")
-            //     .Subscribe(_ =>
-            //     {
-            //         if (subscriptions <= 1)
-            //         {
-            //             rectTransform.anchoredPosition = startPosition;
-            //         }
-            //     })
-            //     .AddTo(this);
-
-            // => these get transformed into a... 
         }
     }
 }
